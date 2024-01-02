@@ -8,15 +8,7 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/KhaosShield/Junk-Generator-V2">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-<h3 align="center">Junk Generator</h3>
+<h1 align="center">Junk Generator</h1>
 
   <p align="center">
     A Python script that allows the user to fill Microsoft Office files s with 'Junk' while not impacting any existing Macros.
