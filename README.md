@@ -78,11 +78,6 @@ It then adds junk text to the notes section of each slide.
 For .xlsm files, the script uses openpyxl to add junk text to the first 10 rows of the active worksheet.
 
 
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -111,20 +106,11 @@ Dependencies
    ./JunkGen.py
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 Simply run JunkGen.py and provide the full path to the file you wish to add junk too. Easy.
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -134,9 +120,6 @@ Simply run JunkGen.py and provide the full path to the file you wish to add junk
 
 
 See the [open issues](https://github.com/KhaosShield/Junk-Generator-V2/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- CONTRIBUTING -->
@@ -152,17 +135,10 @@ If you have a suggestion that would make this better, please fork the repo and c
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
@@ -171,9 +147,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 Your Name - [@KhaosShield](https://twitter.com/@KhaosShield) - khaosshield@protonmail.com
 
 Project Link: [https://github.com/KhaosShield/Junk-Generator-V2](https://github.com/KhaosShield/Junk-Generator-V2)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- ACKNOWLEDGMENTS -->
