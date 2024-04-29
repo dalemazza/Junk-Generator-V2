@@ -38,9 +38,9 @@ def add_junk_to_word(filename):
         doc.save(filename)
 
 def add_junk_to_powerpoint(filename):
-    ppt = Presentation(filename)
+    ppt = Presentation(filename) 
     
-    if len(ppt.slides) == 0:
+    if len(ppt.slides) == 0: # If presentation has no slides create them and give them content
         title_slide_layout = ppt.slide_layouts[0]
         slide = ppt.slides.add_slide(title_slide_layout)
         title = slide.shapes.title
@@ -52,7 +52,7 @@ def add_junk_to_powerpoint(filename):
         if not slide.has_notes_slide:
             slide.notes_slide
 
-        notes_slide = slide.notes_slide
+        notes_slide = slide.notes_slide # Write junk to Notes portion of slides
         for _ in range(5):
             junk_text = ''.join(random.choices(string.ascii_letters + string.digits, k=5000)) # amount of junk characters
             paragraph = notes_slide.notes_text_frame.add_paragraph()
