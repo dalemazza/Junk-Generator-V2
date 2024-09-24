@@ -6,13 +6,13 @@ from docx import Document
 from pptx import Presentation
 from openpyxl import load_workbook
 
-def add_junk_to_word_with_com(filename):
+def add_junk_to_word_with_com(filename:str) -> None:
     try:
         word = win32.gencache.EnsureDispatch('Word.Application')
         word.Visible = False  # Opens word and inserts junk, set to true for debugging
 
         # Ensure an absolute path for use of COM
-        abs_filename = os.path.abspath(filename)
+        abs_filename: str = os.path.abspath(filename)
         doc = word.Documents.Open(abs_filename)
 
         for _ in range(10):  # Add paragraphs of junk text
@@ -27,17 +27,19 @@ def add_junk_to_word_with_com(filename):
         if word:
             word.Quit()
 
-def add_junk_to_word(filename):
+
+def add_junk_to_word(filename:str)-> None:
     if filename.endswith('.docm'):
         add_junk_to_word_with_com(filename)
     else:
         doc = Document(filename)
         for _ in range(10):  # Add paragraphs of junk text
-            junk_text = ''.join(random.choices(string.ascii_letters + string.digits, k=5000)) # Amount of junk characters
+            junk_text: str = ''.join(random.choices(string.ascii_letters + string.digits, k=5000)) # Amount of junk characters
             doc.add_paragraph(junk_text)
         doc.save(filename)
 
-def add_junk_to_powerpoint(filename):
+
+def add_junk_to_powerpoint(filename:str)-> None:
     ppt = Presentation(filename) 
     
     if len(ppt.slides) == 0: # If presentation has no slides create them and give them content
@@ -54,21 +56,23 @@ def add_junk_to_powerpoint(filename):
 
         notes_slide = slide.notes_slide # Write junk to Notes portion of slides
         for _ in range(5):
-            junk_text = ''.join(random.choices(string.ascii_letters + string.digits, k=5000)) # amount of junk characters
+            junk_text: str = ''.join(random.choices(string.ascii_letters + string.digits, k=5000)) # amount of junk characters
             paragraph = notes_slide.notes_text_frame.add_paragraph()
             paragraph.text = junk_text
 
     ppt.save(filename)
 
-def add_junk_to_excel(filename):
+
+def add_junk_to_excel(filename:str)-> None:
     workbook = load_workbook(filename, keep_vba=True)
     worksheet = workbook.active
     for i in range(1, 51):
-        junk_text = ''.join(random.choices(string.ascii_letters + string.digits, k=5000)) # amount of junk characters
+        junk_text: str = ''.join(random.choices(string.ascii_letters + string.digits, k=5000)) # amount of junk characters
         worksheet[f'A{i}'] = junk_text
     workbook.save(filename)
 
-def main():
+
+def main()-> None:
     ascii_art = """
      _             _       ____                           _             
     | |_   _ _ __ | | __  / ___| ___ _ __   ___ _ __ __ _| |_ ___  _ __ 
@@ -79,7 +83,7 @@ def main():
     """
     print(ascii_art)
 
-    file_path = input("Enter file path: ")
+    file_path: str = input("Enter file path: ")
     if not os.path.exists(file_path):
         print("File not found. Exiting...")
         return
